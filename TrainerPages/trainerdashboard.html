@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trainer Dashboard – GenFit</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f8fafc;
+      color: #1f2937;
+    }
+    header {
+      background-color: #0f766e;
+      color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      margin: 0;
+    }
+    nav a {
+      color: #fff;
+      margin-left: 1rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .dashboard {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      min-height: 100vh;
+    }
+    .sidebar {
+      background-color: #e2e8f0;
+      padding: 1.5rem;
+    }
+    .sidebar h2 {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+    .sidebar li {
+      margin-bottom: 1rem;
+    }
+    .sidebar a {
+      text-decoration: none;
+      color: #1f2937;
+      font-weight: 500;
+    }
+    .main {
+      padding: 2rem;
+    }
+    .welcome {
+      margin-bottom: 2rem;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    .card {
+      background-color: #ffffff;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+    .card h3 {
+      margin: 0.5rem 0 0.25rem;
+    }
+    .card p {
+      margin: 0;
+      color: #64748b;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>GenFit</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Messages</a>
+      <a href="#">Profile</a>
+      <a href="#">Logout</a>
+    </nav>
+  </header>
+  <div class="dashboard">
+    <aside class="sidebar">
+      <h2>Menu</h2>
+      <ul>
+        <li><a href="#">My Clients</a></li>
+        <li><a href="#">Workout Plans</a></li>
+        <li><a href="#">Diet Plans</a></li>
+        <li><a href="#">Schedule</a></li>
+        <li><a href="#">Progress Tracker</a></li>
+        <li><a href="#">Earnings</a></li>
+      </ul>
+    </aside>
+    <main class="main">
+      <section class="welcome">
+        <h2>Welcome, Trainer Name!</h2>
+        <p>Here's an overview of your activity.</p>
+      </section>
+      <section class="cards">
+        <div class="card">
+          <h3>12</h3>
+          <p>Active Clients</p>
+        </div>
+        <div class="card">
+          <h3>8</h3>
+          <p>Upcoming Sessions</p>
+        </div>
+        <div class="card">
+          <h3>4.9</h3>
+          <p>Avg. Rating</p>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

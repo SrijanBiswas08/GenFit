@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chat with Trainer</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f1f5f9;
+    }
+    .chat-container {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      width: 100vw;
+    }
+    .chat-header {
+      background-color: #0f766e;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      font-size: 1.2rem;
+    }
+    .chat-body {
+      flex: 1;
+      padding: 1rem;
+      overflow-y: auto;
+      background-color: #ffffff;
+    }
+    .chat-message {
+      margin-bottom: 1rem;
+    }
+    .chat-message.trainer {
+      text-align: left;
+      color: #0f766e;
+    }
+    .chat-message.client {
+      text-align: right;
+      color: #2563eb;
+    }
+    .chat-footer {
+      display: flex;
+      padding: 1rem;
+      background-color: #e2e8f0;
+    }
+    .chat-footer input[type="text"] {
+      flex: 1;
+      padding: 0.5rem;
+      border-radius: 5px;
+      border: 1px solid #cbd5e1;
+      margin-right: 0.5rem;
+    }
+    .chat-footer input[type="file"] {
+      margin-right: 0.5rem;
+    }
+    .chat-footer button {
+      padding: 0.5rem 1rem;
+      background-color: #0f766e;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="chat-container">
+    <div class="chat-header">Chat with Trainer</div>
+    <div class="chat-body" id="chatBody">
+      <div class="chat-message trainer">Hi! How can I help you today?</div>
+      <div class="chat-message client">I want a customized workout plan.</div>
+    </div>
+    <div class="chat-footer">
+      <input type="file" accept="image/*" id="imageInput" />
+      <input type="text" id="messageInput" placeholder="Type a message..." />
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+
+  <script>
+    function sendMessage() {
+      const input = document.getElementById('messageInput');
+      const chatBody = document.getElementById('chatBody');
+      const imageInput = document.getElementById('imageInput');
+
+      if (input.value.trim() !== '') {
+        const msg = document.createElement('div');
+        msg.className = 'chat-message client';
+        msg.textContent = input.value;
+        chatBody.appendChild(msg);
+        input.value = '';
+      }
+
+      if (imageInput.files.length > 0) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          const img = document.createElement('img');
+          img.src = e.target.result;
+          img.style.maxWidth = '150px';
+          img.style.display = 'block';
+          img.style.margin = '0.5rem auto';
+          const imgWrapper = document.createElement('div');
+          imgWrapper.className = 'chat-message client';
+          imgWrapper.appendChild(img);
+          chatBody.appendChild(imgWrapper);
+        };
+        reader.readAsDataURL(imageInput.files[0]);
+        imageInput.value = '';
+      }
+
+      chatBody.scrollTop = chatBody.scrollHeight;
+    }
+  </script>
+</body>
+</html>

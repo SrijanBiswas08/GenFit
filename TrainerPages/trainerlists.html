@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Available Trainers</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      background-image: url('/images/pexels-cottonbro-4753884.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 550px;
+    }
+    h1 {
+      text-align: center;
+      padding: 1rem;
+      color: whitesmoke;
+    }
+    .trainer-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+    .trainer-card {
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      padding: 1rem;
+      width: 250px;
+      text-align: center;
+    }
+    .trainer-card img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+    .trainer-card h3 {
+      margin: 0.5rem 0;
+      color: #1f2937;
+    }
+    .trainer-card p {
+      margin: 0.3rem 0;
+      color: #4b5563;
+    }
+    .rating {
+      color: #f59e0b;
+      font-weight: bold;
+    }
+    .price {
+      color: #0f766e;
+      font-weight: bold;
+    }
+    .status {
+      font-weight: bold;
+      color: #10b981;
+    }
+    .offline {
+      color: #ef4444;
+    }
+    nav a {
+      margin-left: 1rem;
+      text-decoration: none;
+      color: #1f2937;
+      font-weight: 500;
+    }
+    .logo img {
+      height: 200px;
+      width: 150px;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #e0f2f1;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      height: 50px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+        <img src="/Logo/Black_and_White_Minimalist_Illustration_Iron_Gym_Logo-removebg-preview.png" alt="Logo" />
+    </div>
+    <nav>
+      <a href="/genfit.html">Home</a>
+      <a href="/aboutus.html">About</a>
+      <a href="/contactus.html">Contact Us</a>
+      <a href="/selectrole.html">Login</a>
+    </nav>
+  </header>
+  <h1>Available Trainers</h1>
+  <div class="trainer-list">
+    <a href="../chatbox.html" style="text-decoration: none; color: inherit;">
+    <div class="trainer-card">
+      <img src="https://img.icons8.com/ios-filled/100/fitness.png" alt="Trainer 1" />
+      <h3>Rahul Sen</h3>
+      <p>5 Years Experience</p>
+      <p class="rating">⭐ 4.8</p>
+      <p class="price">₹500/hour</p>
+      <p class="status">Online</p>
+    </div> </a>
+    <a href="../chatbox.html" style="text-decoration: none; color: inherit;">
+    <div class="trainer-card">
+      <img src="https://img.icons8.com/ios-filled/100/weightlifting.png" alt="Trainer 2" />
+      <h3>Anita Roy</h3>
+      <p>7 Years Experience</p>
+      <p class="rating">⭐ 4.9</p>
+      <p class="price">₹650/hour</p>
+      <p class="status offline">Offline</p>
+    </div>
+  </a>
+    <a href="../chatbox.html" style="text-decoration: none; color: inherit;">
+    <div class="trainer-card">
+      <img src="https://img.icons8.com/ios-filled/100/bodybuilder.png" alt="Trainer 3" />
+      <h3>Sourav Dutta</h3>
+      <p>4 Years Experience</p>
+      <p class="rating">⭐ 4.6</p>
+      <p class="price">₹400/hour</p>
+      <p class="status">Online</p>
+    </div>
+    </a>
+  </div>
+</body>
+</html>

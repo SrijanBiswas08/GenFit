@@ -1,0 +1,48 @@
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: url('/images/photo-1558611848-73f7eb4001a1.jpeg') no-repeat center center/cover;
+    background-attachment: fixed; /* stays fixed while scrolling */
+    }
+    h2 {
+      color: white;
+      text-shadow: #333 1px 1px 5px;
+      margin-top: 30px;
+    }
+    .exercise-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .exercise-card {
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      width: 250px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+      position: relative;
+      transition: transform 0.2s;
+    }
+    .exercise-card:hover {
+      transform: translateY(-5px);
+    }
+    .exercise-card h4 {
+      margin: 0;
+      color: #333;
+    }
+    .description-card {
+      display: none;
+      position: absolute;
+      bottom: 100%;
+      left: 0;
+      margin-bottom: 8px;
+      background-color: #e6f0ff;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+      z-index: 1;
+      font-size: 14px;
+    }
+    .exercise-card:hover .description-card {
+      display: block;
+    }

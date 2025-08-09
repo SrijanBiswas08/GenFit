@@ -1,0 +1,26 @@
+/* General Body Style with Background Image */
+    body {
+    font-family: Arial; text-align:center; background:#f5f5f5; padding:2rem;
+    margin: 0;
+    background: url('/images/photo-1558611848-73f7eb4001a1.jpeg') no-repeat center center/cover;
+    background-attachment: fixed; /* stays fixed while scrolling */
+    color: white;
+    }
+
+    .exercise-container {background:white; padding:2rem; border-radius:1rem; box-shadow:0 4px 10px rgba(0,0,0,0.1); display:inline-block;}
+
+    img {width:300px; border-radius:10px; margin-bottom:1rem;}
+
+    .exercise-container {
+      max-width: 800px;
+      margin: 40px auto;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+    }
+    h1 {
+      text-align: center;
+      color: black;
+      margin-bottom: 30px;
+    }

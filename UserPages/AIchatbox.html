@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Gym Chat</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background-image: url('/images/pexels-cottonbro-4753884.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    h1 {
+      margin-top: 2rem;
+      font-size: 2rem;
+    }
+    .chat-container {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 2rem;
+      border-radius: 1rem;
+      width: 90%;
+      max-width: 600px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+    .chat-box {
+      height: 450px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 0.5rem;
+      padding: 1rem;
+      overflow-y: auto;
+      margin-bottom: 1rem;
+    }
+    .input-area {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+    }
+    input[type="text"] {
+      padding: 0.75rem;
+      border: none;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      flex: 1;
+    }
+    button {
+      background-color: #10b981;
+      color: white;
+      border: none;
+      padding: 0.75rem;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background-color: #059669;
+    }
+    .camera-icon {
+      font-size: 1.5rem;
+      cursor: pointer;
+      background-color: #0f766e;
+      color: white;
+      padding: 0.6rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+      transition: background 0.3s;
+    }
+    .camera-icon:hover {
+      background-color: #0d5f59;
+    }
+  </style>
+</head>
+<body>
+  <h1 style="color: white;">Genfit - AI Assistant</h1>
+  <div class="chat-container">
+    <div class="chat-box" id="chatBox">
+      <!-- Chat messages will appear here -->
+    </div>
+    <div class="input-area">
+      <input type="text" id="userInput" placeholder="Ask something about workout or meals...">
+      <label for="imageInput" class="camera-icon">📷</label>
+      <input type="file" id="imageInput" accept="image/*" style="display: none;">
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+
+  <script>
+    function sendMessage() {
+      const input = document.getElementById("userInput");
+      const message = input.value.trim();
+      if (!message) return;
+
+      const chatBox = document.getElementById("chatBox");
+      const userMsg = document.createElement("div");
+      userMsg.textContent = "You: " + message;
+      chatBox.appendChild(userMsg);
+
+      const aiResponse = document.createElement("div");
+      aiResponse.textContent = "AI: Analyzing... (This is a placeholder)";
+      chatBox.appendChild(aiResponse);
+
+      input.value = "";
+      chatBox.scrollTop = chatBox.scrollHeight;
+    }
+  </script>
+</body>
+</html>

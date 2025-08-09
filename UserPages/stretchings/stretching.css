@@ -1,0 +1,40 @@
+/* General Body Style with Background Image */
+    body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: url('/images/photo-1558611848-73f7eb4001a1.jpeg') no-repeat center center/cover;
+    background-attachment: fixed; /* stays fixed while scrolling */
+    color: white;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+    }
+    h1 {
+      text-align: center;
+      color: black;
+      margin-bottom: 30px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      background: #f0f8ff;
+      padding: 12px 16px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      font-size: 1.1em;
+      color: #333;
+    }
+    li a {
+      text-decoration: none;
+      color: #007bff;
+      transition: color 0.3s ease;
+    }
+
